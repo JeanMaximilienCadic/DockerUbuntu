@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-RUN apt update; apt install sysstat git rsync -y
+RUN apt update; apt install sysstat git rsync wget curl -y
 
 WORKDIR /tmp
 
