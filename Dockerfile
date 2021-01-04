@@ -1,5 +1,10 @@
 FROM ubuntu:latest
 
-RUN apt update; apt install sysstat -y
+RUN apt update; apt install sysstat git rsync -y
 
-COPY ./usr/bin/* /usr/bin/
+WORKDIR /tmp
+
+RUN git clone https://github.com/JeanMaximilienCadic/DockerUbuntu
+RUN rsync -avz /tmp/DockerUbuntu/usr/bin/* /usr/bin/
+
+RUN rm -r /tmp/DockerUbuntu
