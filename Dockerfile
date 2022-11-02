@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:kinetic-20220830
 
 RUN apt update; apt install sysstat git rsync wget curl -y
 
