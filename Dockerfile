@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:kinetic
 
 RUN apt update; apt install sysstat git rsync wget curl -y
 
